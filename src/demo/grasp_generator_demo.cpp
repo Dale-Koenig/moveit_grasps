@@ -153,7 +153,10 @@ public:
     // Animate open and closing end effector
     if (true)
     {
-      geometry_msgs::Pose pose = visual_tools_->getIdentityPose();
+      // TODO(davetcoleman): after next release of rviz_visual_tools:
+      // geometry_msgs::Pose pose = visual_tools_->getIdentityPose();
+      geometry_msgs::Pose pose;
+      visual_tools_->generateEmptyPose(pose);
       pose.position.x = .3;
 
       // Test visualization of end effector in OPEN position
